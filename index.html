@@ -11,7 +11,7 @@
         <div id="myQuiz" ng-controller="QuizController">
             <h1>Test Your Knowledge:<span>Saturn</span></h1>
             <div class="progress">
-                <div ng-repeat="question in myQuestions"></div>                
+                <div class="{{ ($index === activeQuestion) ? 'on' : 'off' }}" ng-repeat="question in myQuestions"></div>                
             </div>
             <div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}">
                 <h2>Welcome</h2>
